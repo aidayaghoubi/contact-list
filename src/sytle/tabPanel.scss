@@ -1,0 +1,33 @@
+ .char-list{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+
+   & li{
+    font-size: 22px;
+    background-color:var(--hover-color);
+    color: var(--text-color);
+    border-left: 1px solid var( --bgCOlor-color);
+    cursor: pointer;
+    width: 100%;
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+    transition: 0.5s;
+    justify-content: center;
+
+    &:hover{
+        transform: translate(0px ,-10px);
+        box-shadow: 1px 1px 20px -5px #000;
+    }
+    }
+    & li:first-of-type{
+        border-radius: 15px 0px 0px 0;
+    }
+    & li:last-of-type{
+        border-radius: 0px 15px 0px 0px;
+    }
+}
