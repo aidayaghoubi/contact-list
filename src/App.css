@@ -3,7 +3,8 @@
   
     --primary-color: #ffff;
     --tab-color:#323335;
-    --text-color:#ECEFFF;
+    --text-color:#fff;
+    --after-shasow-color:rgb(108 108 108);
     --contact-box-color:#6B76B1;
     --title-color: hsl(230, 3%, 44%);
     --links-color: #D9D9D9;
@@ -15,6 +16,7 @@
 [data-theme = "light"]{
     --tab-color:#D9D9D9;
     --text-color:#323335;
+    --after-shasow-color:rgb(173 173 173);
     --contact-box-color:#6B76B1;
     --primary-color: #305DF8;
     --title-color: #939ED3;

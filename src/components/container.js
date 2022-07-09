@@ -38,7 +38,7 @@ const ALPHABET = [
 const Container = () => {
   const [state, setState] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [char, setChar] = useState("");
+  const [char, setChar] = useState("a");
 
   useEffect(() => {
     setTimeout(() => {
@@ -55,7 +55,7 @@ const Container = () => {
       ) : (
         <>
           <SwitchTheme />
-          <TabPanel char={ALPHABET} changeTab={setChar} />
+          <TabPanel char={ALPHABET} activeCar={char} changeTab={setChar} items={state}/>
           <ContactCard char={char} items={state} />
         </>
       )}
