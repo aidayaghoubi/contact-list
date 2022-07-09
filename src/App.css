@@ -1,34 +1,35 @@
-
-:root{
-  
-    --primary-color: #ffff;
-    --tab-color:#323335;
-    --text-color:#fff;
-    --after-shasow-color:rgb(108 108 108);
-    --contact-box-color:#6B76B1;
-    --title-color: hsl(230, 3%, 44%);
-    --links-color: #D9D9D9;
-    --logo-color:#305DF8;
-    --bgCOlor-color:#1B1C20;
-    --hover-color:#323335;
+:root {
+  --primary-color: #ffff;
+  --tab-color: #323335;
+  --text-color: #fff;
+  --after-shasow-color: rgb(108 108 108);
+  --inner-card-bg: #818181;
+  --contact-box-color: #6b76b1;
+  --title-color: hsl(230, 3%, 44%);
+  --links-color: #d9d9d9;
+  --logo-color: #305df8;
+  --bgCOlor-color: #1b1c20;
+  --hover-color: #323335;
 }
 
-[data-theme = "light"]{
-    --tab-color:#D9D9D9;
-    --text-color:#323335;
-    --after-shasow-color:rgb(173 173 173);
-    --contact-box-color:#6B76B1;
-    --primary-color: #305DF8;
-    --title-color: #939ED3;
-    --logo-color:#305DF8;
-    --links-color: #6B76B1;
-    --bgCOlor-color:hsl(0, 0%, 100%);
-   
-    --hover-color:#ECEFFF;
+[data-theme="light"] {
+  --tab-color: #d9d9d9;
+  --text-color: #323335;
+  --after-shasow-color: rgb(173 173 173);
+  --inner-card-bg: #cbd0ea;
+  --contact-box-color: #6b76b1;
+  --primary-color: #305df8;
+  --title-color: #939ed3;
+  --logo-color: #305df8;
+  --links-color: #6b76b1;
+  --bgCOlor-color: hsl(0, 0%, 100%);
 
+  --hover-color: #ecefff;
 }
 
-body{
-    background-color:var(--bgCOlor-color) ;
-    transition: 0.5s;
+body {
+  background-color: var(--bgCOlor-color);
+  transition: 0.5s;
+  font-family: "Edu NSW ACT Foundation", cursive;
+  font-family: "Raleway", sans-serif;
 }
