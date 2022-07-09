@@ -4,6 +4,8 @@
     justify-content: space-between;
     padding: 0;
     margin: 0;
+    animation-name: moveDown;
+    animation-duration:600ms;
     width: 100%;
 
     & .active{
@@ -49,4 +51,15 @@
     
     }
    
+}
+
+
+@keyframes moveDown {
+    from{
+        transform: translate(0px , 45px);
+      
+    }
+    to{
+        transform: translate(0px, 0px)
+    }
 }

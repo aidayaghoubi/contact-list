@@ -10,6 +10,10 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    transform: translate(0px 0px);
+    transition: 1s;
+    animation-name: moveDown2;
+    animation-duration:600ms;
 
     & .empty{
         width: 100%;
@@ -127,3 +131,13 @@
         }
     }
 }   
+
+@keyframes moveDown2 {
+    from{
+        transform: translate(0px , 45px);
+      
+    }
+    to{
+        transform: translate(0px, 0px)
+    }
+}
