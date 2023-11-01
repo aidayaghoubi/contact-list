@@ -37,7 +37,7 @@ const ALPHABET = [
 
 const Container = () => {
 
-  const [char, setChar] = useState("");
+  const [char, setChar] = useState("a");
   const { data, loading } = useDataFetching("https://randomuser.me/api/?results=100&seed=abc")
 
 
@@ -48,7 +48,7 @@ const Container = () => {
       ) : (
         <>
           <SwitchTheme />
-          <TabPanel char={ALPHABET} changeTab={setChar} />
+          <TabPanel activeCar={char} items={data.results} char={ALPHABET} changeTab={setChar} />
           <ContactCard char={char} items={data.results} />
         </>
       )}
