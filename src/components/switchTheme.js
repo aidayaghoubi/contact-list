@@ -7,7 +7,6 @@ const SwitchTheme = () => {
 
     const onChangeSwitchTheme = () => {
         setState(state => !state)
-        console.log("jeofeo")
         if(state){
             document.documentElement.setAttribute("data-theme", "light");
         }else{

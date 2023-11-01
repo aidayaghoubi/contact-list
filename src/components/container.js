@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
-import Api from "../utils/api";
+import { useState } from "react";
 import TabPanel from "./tabPanel";
 import "../sytle/container.scss";
 import ContactCard from "./cantactCard";
 import LoadingUi from "./loadingUi";
 import SwitchTheme from "./switchTheme";
+import useDataFetching from "../hooks/useDataFetching";
 
 const ALPHABET = [
   "a",
@@ -36,17 +36,10 @@ const ALPHABET = [
 ];
 
 const Container = () => {
-  const [state, setState] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [char, setChar] = useState("");
 
-  useEffect(() => {
-    setTimeout(() => {
-      Api()
-        .then((item) => setState(item.results))
-        .then((item) => setLoading(false));
-    }, [900]);
-  }, []);
+  const [char, setChar] = useState("");
+  const { data, loading } = useDataFetching("https://randomuser.me/api/?results=100&seed=abc")
+
 
   return (
     <div className="container">
@@ -56,7 +49,7 @@ const Container = () => {
         <>
           <SwitchTheme />
           <TabPanel char={ALPHABET} changeTab={setChar} />
-          <ContactCard char={char} items={state} />
+          <ContactCard char={char} items={data.results} />
         </>
       )}
     </div>
