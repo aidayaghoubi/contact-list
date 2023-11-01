@@ -1,12 +1,143 @@
 .contact-card{
-    background-color:var(--contact-box-color);
+    background-color:var(--hover-color);
+    border: 1px solid hsl(0deg 3% 68%);
     width: 100%;
-    height: 320px;
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    min-height: 350px;
+    max-height: 350px;
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    transform: translate(0px 0px);
+    transition: 1s;
+    animation-name: moveDown2;
+    animation-duration:600ms;
 
-    & .items-box{
+    & .empty{
         width: 100%;
+        height: 100%;
+        display: flex;
+        font-style: jus;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: var(--text-color);
+
+        & div svg{
+            width: 45px;
+            height: 45px;
+            fill: var(--text-color);
+        }
+    }
+    
+    & .userName{
+        color: var(--text-color);
+        padding-bottom: 10px;
+        margin: 0;
+        border-bottom: 1px dashed var(--text-color);
+    }
+
+    & .contact-List{  
+        cursor: pointer;
+        width: 46%;
+        padding: 0px 17px;
+        margin: 2px 0px;
+        position: relative;
+    }
+    & .more-information{
+        position: absolute;
+        background-color: var(--inner-card-bg);
+        z-index: 999;
+        width: 95%;
+        align-items: center;
+        top: 25px;
+        display: flex;
+        cursor: context-menu;
+        border-radius: 3px;
+
+        .close-button {
+            cursor: pointer;
+            width: 45px;
+            height: 45px;
+            box-shadow: 0px 10 10px 10px rgba(0, 0, 0, 0.25);
+            border-radius: 0px;
+            background-color: transparent;
+            border: none;
+            right: 0;
+            top: 0;
+            position: absolute;
+            display: block;
+            z-index: 200;
+            text-indent: -9999px;
+          }
+          .close-button:before,
+          .close-button:after {
+            content: '';
+            width: 55%;
+            height: 2px;
+            background: #ffffff;
+            position: absolute;
+            top: 48%;
+            left: 22%;
+            transform: rotate(45deg);
+            transition: all 0.3s ease-out;
+          }
+          .close-button:after {           
+            transform: rotate(-45deg);
+            transition: all 0.3s ease-out;
+          }
+         
+        & .profile{
+            & img{
+                border-radius: 50%;
+                border: 3px solid #d3d3d3;
+                height: 203px;           
+                margin: 1rem;
+            }
+        }
+        
+        & .form{
+            display: flex;
+            flex-direction: column;
+          
+            width: 54% ;
+
+            & .name{
+                font-size: 22px;
+                font-weight: bold;
+                color: #000;
+            }
+
+            & div{
+
+                & p{
+                    width: 22%;
+                    font-weight: bold;
+                    font-size: 16px;
+                    margin: 0;
+                }
+                & span{
+                    color: #000000;
+                    font-weight: 500;
+                    font-size: 14px;
+                }
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                margin: 12px 0px;
+            }
+        }
     }
 }   
+
+@keyframes moveDown2 {
+    from{
+        transform: translate(0px , 45px);
+      
+    }
+    to{
+        transform: translate(0px, 0px)
+    }
+}

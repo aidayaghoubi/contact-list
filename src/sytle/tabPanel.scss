@@ -4,30 +4,62 @@
     justify-content: space-between;
     padding: 0;
     margin: 0;
+    animation-name: moveDown;
+    animation-duration:600ms;
     width: 100%;
+
+    & .active{
+        position: relative;
+        &::after{
+            content: "";
+            position: absolute;
+            background: rgb(255,255,255);
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, var(--after-shasow-color) 100%);
+            bottom: 0;
+            width: 100%;
+            height: 15px;  
+        }
+    }
 
    & li{
     font-size: 22px;
     background-color:var(--hover-color);
     color: var(--text-color);
-    border-left: 1px solid var( --bgCOlor-color);
+    border: 1px solid hsl(0deg 3% 68%);
     cursor: pointer;
     width: 100%;
     padding: 8px 0;
     display: flex;
+    border-radius: 8px 8px 0 0;
     align-items: center;
     transition: 0.5s;
     justify-content: center;
+    position: relative;
 
-    &:hover{
-        transform: translate(0px ,-10px);
-        box-shadow: 1px 1px 20px -5px #000;
+    & p{
+        margin: 0;
+        margin-right: 8px;
     }
+    & span{
+        font-size: 14px;
+        margin-left: 5px;
+        position: absolute;
+        right: 4px;
+        bottom: 2px;
+        color: gray;
     }
-    & li:first-of-type{
-        border-radius: 15px 0px 0px 0;
+    
     }
-    & li:last-of-type{
-        border-radius: 0px 15px 0px 0px;
+   
+}
+
+
+@keyframes moveDown {
+    from{
+        transform: translate(0px , 45px);
+      
+    }
+    to{
+        transform: translate(0px, 0px)
     }
 }

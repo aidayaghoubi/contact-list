@@ -2,6 +2,9 @@
     height: 61px;
     width: 100%;
     padding-left: 27px;
+  transform: translate(0px , 0px);
+    animation-name: moveDown1;
+    animation-duration:600ms;
 }
 
   .checkbox {
@@ -45,3 +48,14 @@
   .fa-sun {
     color: yellow;
   }
+
+  @keyframes moveDown1 {
+    from{
+        transform: translate(0px , -45px);
+      
+    }
+    to{
+        transform: translate(0px, 0px)
+    }
+}
+  
