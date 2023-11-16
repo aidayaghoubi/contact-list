@@ -90,11 +90,15 @@
           }
          
         & .profile{
+            min-height: 240px;
+            min-width: 244px;
             & img{
                 border-radius: 50%;
                 border: 3px solid #d3d3d3;
-                height: 203px;           
+                min-height:203px ;
+                height:230px ;           
                 margin: 1rem;
+                min-width: 235px;
             }
         }
         
