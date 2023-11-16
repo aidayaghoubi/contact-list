@@ -37,7 +37,7 @@ const ContactCard = ({ items, char }) => {
     <div className="contact-card">
       {state.map((el, i) => (
         <div className="contact-List" onClick={() => onShowMoreInfo(el.email)}>
-          <p className="userName">{el.name.first}</p>
+          <p className="userName">{el.name.first + " " + el.name.last }</p>
           {
             showInfo === el.email &&
             <div className="more-information" >
