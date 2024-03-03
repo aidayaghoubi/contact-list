@@ -6,6 +6,8 @@ const TabPanel = ({ activeCar, char, changeTab, items }) => {
     changeTab(el);
   }
 
+  console.log();
+
   
   return (
     <ul className="char-list">
