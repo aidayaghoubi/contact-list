@@ -39,7 +39,7 @@ const ContactCard = ({ items, char }) => {
         <div className="contact-List" onClick={() => onShowMoreInfo(el.email)}>
            <p className="userName">{el.name.first}</p>
            <div>
-            <button className="button">see contact</button>
+            <button className="button">see contact #</button>
            </div>
           {
             showInfo === el.email &&
